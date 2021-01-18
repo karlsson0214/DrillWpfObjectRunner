@@ -14,5 +14,6 @@
         <TextBlock Text="Time (s)" />
         <TextBox Name="Time" />
         <Button Name="Save" Content="Save" Click="Save_Click" />
+        <TextBlock Name="Output" />
     </StackPanel>
 </Window>

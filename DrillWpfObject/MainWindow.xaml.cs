@@ -31,12 +31,23 @@ namespace DrillWpfObject
             // write code to save result in list named results
 
             // example: how to convert a string to a double
-            String decimalNumberAsText = "3.14";
-            double number = Convert.ToDouble(decimalNumberAsText);
+            
+            double time = Convert.ToDouble(Time.Text);
 
             // example: how to convert a string to an int
-            String integerAsText = "12";
-            int number2 = Convert.ToInt32(integerAsText);
+            
+            int distance = Convert.ToInt32(Distance.Text);
+
+            Result result = new Result(tid: time, namn: NameOfRunner.Text, distans: distance);
+            results.Add(result);
+
+            Output.Text = "";
+            foreach(Result oneResult in results)
+            {
+                Output.Text += oneResult.ToString();
+
+            }
+
         }
     }
 }
